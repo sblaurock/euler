@@ -1,3 +1,5 @@
+#time	0m19.750s
+
 number = 600851475143
 primes = []
 

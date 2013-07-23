@@ -1,12 +1,12 @@
-#time	0m1.159s
+#time	0m0.677s
 
 # Let's just assume we know that 2 is prime - it breaks our increment rule
 counter = 1
 limit = 10001
 
-# Evaluate if a passed integer is prime
+# Evaluate if a passed odd integer is prime
 def isPrime? num
-	_limit = Math.sqrt(num)
+	_limit = Math.sqrt(num).floor
 	_i = 3
 
 	while _i <= _limit
@@ -18,7 +18,7 @@ def isPrime? num
 	return true
 end
 
-# Loop until our prime count hits the limit
+# Loop until our prime count hits 'limit'
 i = 1
 begin
 	i += 2

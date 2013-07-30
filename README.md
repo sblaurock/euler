@@ -1,4 +1,6 @@
 euler
 =====
 
-Project Euler solutions.
+(Very traditional) Project Euler solutions.
+
+https://projecteuler.net

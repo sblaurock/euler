@@ -1,6 +1,6 @@
 euler
 =====
 
-(Very traditional) Project Euler solutions.
+(Very traditional) [Project Euler](https://projecteuler.net) solutions.
 
-https://projecteuler.net
+Solved using Ruby 1.9.3.

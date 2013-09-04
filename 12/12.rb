@@ -1,4 +1,4 @@
-#time	0m7.518s
+#time	0m2.45s
 
 limit = 500
 primesLimit = 10000

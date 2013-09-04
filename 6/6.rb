@@ -1,4 +1,4 @@
-#time	0m0.003s
+#time	0m0.02s
 
 limit = 100
 

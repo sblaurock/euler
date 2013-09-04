@@ -1,4 +1,4 @@
-#time 0m6.141s
+#time 0m3.96s
 
 palindromes = []
 

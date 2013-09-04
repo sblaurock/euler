@@ -1,4 +1,4 @@
-#time	0m10.715s
+#time	0m1.34s
 
 number = 600851475143
 primes = []

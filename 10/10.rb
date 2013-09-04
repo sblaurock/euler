@@ -1,4 +1,4 @@
-#time	0m25.076s
+#time	0m3.37s
 
 # Let's just assume we know that 2 is prime - it breaks our increment rule
 sum = 2

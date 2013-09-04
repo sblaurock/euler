@@ -1,4 +1,4 @@
-#time	0m28.564s
+#time	0m8.05s
 
 # Evaluate if a supplied number is divisible by every number from one to 20
 def isDivisible? num

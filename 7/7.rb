@@ -1,4 +1,4 @@
-#time	0m0.677s
+#time	0m0.11s
 
 # Let's just assume we know that 2 is prime - it breaks our increment rule
 counter = 1

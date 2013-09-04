@@ -1,4 +1,4 @@
-#time	0m42.785s
+#time	0m7.15s
 
 limit = 1000000
 longest = 0

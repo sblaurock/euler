@@ -1,4 +1,4 @@
-#time	0m0.005s
+#time	0m0.02s
 
 num = 2
 limit = 1000

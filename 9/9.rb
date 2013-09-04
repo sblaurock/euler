@@ -1,4 +1,4 @@
-#time	0m0.084s
+#time	0m0.03s
 
 limit = 1000
 loopLimit = limit / 2

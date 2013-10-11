@@ -1,4 +1,4 @@
-#time	0m0.06s
+#time	0m0.05s
 
 $numbers = []
 $sums = []
@@ -16,13 +16,11 @@ def recurse y, x, sum
 		return
 	end
 
-	_y = y
-	_x = x
-	_sum = sum
-	_cur = $numbers[y][x].to_i
+	_sum = sum + $numbers[y][x].to_i
+	y += 1
 
-	recurse(y + 1, x, sum += _cur)
-	recurse(_y + 1, _x + 1, _sum += _cur)
+	recurse(y, x, _sum)
+	recurse(y, x + 1, _sum)
 end
 
 # Kick it off

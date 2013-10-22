@@ -4,7 +4,7 @@ limit = 10000
 $sums = []
 sum = 0
 
-# Calculate the sum of all divisors of a number (needs better caching)
+# Calculate the sum of all divisors of a number
 def getDivisorSum num
 	_sum = 0
 	_limit = 1
@@ -15,7 +15,7 @@ def getDivisorSum num
 		_i -= 1
 	end
 
-	return _sum > 0 ? _sum : 1
+	return _sum >= 0 ? _sum : 1
 end
 
 # Loop through 1 to 'limit', caching results and adding amicable numbers to 'sum' 

@@ -7,41 +7,41 @@ start = -999
 
 # Evaluate if a passed integer is prime
 def isPrime? num
-  if num % 2 === 0
-    return false
-  else
-    _limit = Math.sqrt(num).floor
-    _i = 3
+	if num % 2 === 0
+		return false
+	else
+		_limit = Math.sqrt(num).floor
+		_i = 3
 
-    while _i <= _limit
-      return false unless num % _i != 0
+		while _i <= _limit
+			return false unless num % _i != 0
 
-      _i += 2
-    end
+			_i += 2
+		end
 
-    return true
-  end
+		return true
+	end
 end
 
 # Loop through possible formulas to find which yields most consecutive primes
 i = start
 while i < limit
-  j = start
-  while j < limit
-    n = 1
-    begin
-      n += 1
-    end while isPrime? (n * n + i * n + j).abs
+	j = start
+	while j < limit
+		n = 1
+		begin
+			n += 1
+		end while isPrime? (n * n + i * n + j).abs
 
-    if n > maxPrimes
-      maxPrimes = n
-      product = i * j
-    end
+		if n > maxPrimes
+			maxPrimes = n
+			product = i * j
+		end
 
-    j += 1
-  end
+		j += 1
+	end
 
-  i += 1
+	i += 1
 end
 
 puts product

@@ -1,4 +1,6 @@
-#time	0m2.45s
+#time	0m2.839s
+
+require '../shared.rb'
 
 limit = 500
 primesLimit = 10000
@@ -15,24 +17,6 @@ def getTriangle num
 		return $triangles[num]
 	else
 		return $triangles[num] = (getTriangle num - 1) + num
-	end
-end
-
-# Evaluate if a passed integer is prime
-def isPrime? num
-	if num % 2 === 0
-		return false
-	else
-		_limit = Math.sqrt(num).floor
-		_i = 3
-
-		while _i <= _limit
-			return false unless num % _i != 0
-
-			_i += 2
-		end
-
-		return true
 	end
 end
 

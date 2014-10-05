@@ -1,22 +1,12 @@
-#time	0m2.12s
+#time	0m1.221s
 
-$cache = [0, 1]
+require '../shared.rb'
+
 limit = 1000
-
-# Returns the Fibonacci number at position 'num' (with caching)
-def fibonacci num
-	_cached = $cache[num]
-
-	if _cached
-		return _cached
-	else
-		return $cache[num] = fibonacci(num - 1) + fibonacci(num - 2)
-	end
-end
 
 # Find the first Fibonacci term with at least 'limit' digits
 i = 0
-while fibonacci(i).to_s.split('').size < limit
+while (getFibonacci i).to_s.split('').size < limit
 	i += 1
 end
 

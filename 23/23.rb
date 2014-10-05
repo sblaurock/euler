@@ -1,30 +1,14 @@
-#time 0m2.96s
+#time 0m2.817s
+
+require '../shared.rb'
 
 abundantNumbers = []
 abundantNumberSums = {}
 limit = 28123
 
-# Calculate the sum of all divisors of a number
-def getDivisorSum num
-	_divisors = [1]
-	_limit = Math.sqrt(num)
-	_i = 2
-
-	while _i <= _limit do
-		if num % _i === 0
-			_divisors.push(num / _i) unless _divisors.include?(num / _i)
-			_divisors.push(_i) unless _divisors.include?(_i)
-		end
-
-		_i += 1
-	end
-
-	return _divisors.inject(:+)
-end
-
 i = 12
 while i <= limit do
-	abundantNumbers.push(i) if getDivisorSum(i) > i
+	abundantNumbers.push(i) if (getProperDivisors i).inject(:+) > i
 
 	i += 1;
 end

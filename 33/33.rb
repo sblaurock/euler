@@ -1,27 +1,11 @@
-#time 0m0.088s
+#time 0m0.086s
+
+require '../shared.rb'
 
 start = 10
 limit = 99
 productNumerator = 1
 productDenominator = 1
-
-# Return an array containing all divisors of a number
-def getDivisors num
-	_divisors = []
-	_limit = Math.sqrt(num)
-	_i = 1
-
-	while _i <= _limit do
-		if num % _i === 0
-			_divisors.push(num / _i) unless _divisors.include?(num / _i)
-			_divisors.push(_i) unless _divisors.include?(_i)
-		end
-
-		_i += 1
-	end
-
-	return _divisors
-end
 
 # Loop through all combinations, disregarding "trivial" examples
 numerator = start

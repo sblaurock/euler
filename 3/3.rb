@@ -1,21 +1,9 @@
-#time	0m1.34s
+#time	0m1.555s
+
+require '../shared.rb'
 
 number = 600851475143
 primes = []
-
-# Evaluate if a passed odd integer is prime
-def isPrime? num
-	_limit = Math.sqrt(num).floor
-	_i = 3
-
-	while _i <= _limit
-		return false unless num % _i != 0
-
-		_i += 2
-	end
-
-	return true
-end
 
 # Find all the primes
 i = 3

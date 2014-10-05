@@ -14,7 +14,7 @@ def factorial num
 		return $cache[num]
 	end
 
-	return $cache = factorial(num - 1) * num
+	return $cache[num] = factorial(num - 1) * num
 end
 
 # Sum all digits of the factorial of 'base'

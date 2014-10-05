@@ -15,7 +15,7 @@ while i < limit
 		n = 1
 		begin
 			n += 1
-		end while isPrime? (n * n + i * n + j).abs
+		end while (n * n + i * n + j).abs.prime?
 
 		if n > maxPrimes
 			maxPrimes = n

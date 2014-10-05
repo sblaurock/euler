@@ -6,6 +6,6 @@ sum = 0
 base = 100
 
 # Sum all digits of the factorial of 'base'
-getFactorial(base).to_s.split('').map{ |i| sum += i.to_i }
+base.factorial.to_s.split('').map{ |i| sum += i.to_i }
 
 puts sum

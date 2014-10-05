@@ -11,7 +11,7 @@ divisors = []
 i = 3
 limit = Math.sqrt(number).floor
 while i <= limit do
-	if isPrime? i
+	if i.prime?
 		divisors.push(i)
 		sum += i
 	end

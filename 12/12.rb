@@ -23,7 +23,7 @@ end
 # Pre-populate a list of primes
 i = 3
 while i <= primesLimit
-	$primes.push(i) if isPrime? i
+	$primes.push(i) if i.prime?
 	i += 2
 end
 
@@ -50,7 +50,7 @@ def getDivisorCount num
 	_divisors = []
 	_count = 1
 
-	while !isPrime? num
+	while !num.prime?
 		_factor = getPrimeFactor num
 		_current = _divisors[_factor]
 		_divisors[_factor] = _current != nil ? _current + 1 : 1

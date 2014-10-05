@@ -2,73 +2,75 @@
 $factorial_cache = []
 $fibonacci_cache = []
 
-# Returns the factorial of a number (with caching)
-def getFactorial num
-	if (num == 0 || num == 1)
-		return 1
-	end
-
-	if $factorial_cache[num]
-		return $factorial_cache[num]
-	end
-
-	return $factorial_cache[num] = getFactorial(num - 1) * num
-end
-
-# Evaluate if a passed integer is prime
-def isPrime? num
-	if num % 2 === 0
-		return false
-	else
-		_limit = Math.sqrt(num).floor
-		_i = 3
-
-		while _i <= _limit
-			return false unless num % _i != 0
-
-			_i += 2
+class Fixnum
+	# Returns the factorial of a number (with caching)
+	def factorial
+		if (self == 0 || self == 1)
+			return 1
 		end
 
-		return true
-	end
-end
-
-# Calculate all divisors of a number
-def getDivisors num
-	_divisors = []
-	_limit = Math.sqrt(num).floor
-	_i = 1
-
-	while _i <= _limit do
-		if num % _i === 0
-			_divisors.push(num / _i) unless _divisors.include?(num / _i)
-			_divisors.push(_i) unless _divisors.include?(_i)
+		if $factorial_cache[self]
+			return $factorial_cache[self]
 		end
 
-		_i += 1
+		return $factorial_cache[self] = (self - 1).factorial * self
 	end
 
-	return _divisors
-end
+	# Evaluate if a passed integer is prime
+	def prime?
+		if self % 2 === 0
+			return false
+		else
+			_limit = Math.sqrt(self).floor
+			_i = 3
 
-# Calculate all proper divisors of a number
-def getProperDivisors num
-	_divisors = getDivisors num
+			while _i <= _limit
+				return false unless self % _i != 0
 
-	_divisors.delete(num)
+				_i += 2
+			end
 
-	return _divisors
-end
+			return true
+		end
+	end
 
-# Returns the Fibonacci number at position (with caching)
-def getFibonacci num
-	return num if num <= 1
+	# Returns an array of all divisors of a number
+	def divisors
+		_divisors = []
+		_limit = Math.sqrt(self).floor
+		_i = 1
 
-	_cached = $fibonacci_cache[num]
+		while _i <= _limit do
+			if self % _i === 0
+				_divisors.push(self / _i) unless _divisors.include?(self / _i)
+				_divisors.push(_i) unless _divisors.include?(_i)
+			end
 
-	if _cached
-		return _cached
-	else
-		return $fibonacci_cache[num] = getFibonacci(num - 1) + getFibonacci(num - 2)
+			_i += 1
+		end
+
+		return _divisors
+	end
+
+	# Returns an array of all proper divisors of a number
+	def properDivisors
+		_divisors = self.divisors
+
+		_divisors.delete(self)
+
+		return _divisors
+	end
+
+	# Returns the Fibonacci number at position (with caching)
+	def fibonacci
+		return self if self <= 1
+
+		_cached = $fibonacci_cache[self]
+
+		if _cached
+			return _cached
+		else
+			return $fibonacci_cache[self] = (self - 1).fibonacci + (self - 2).fibonacci
+		end
 	end
 end

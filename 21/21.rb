@@ -10,12 +10,12 @@ sum = 0
 i = 2
 while i < limit do
 	if !$sums[i]
-		divisorSum = (getProperDivisors i).inject(:+)
+		divisorSum = i.properDivisors.inject(:+)
 		$sums[i] = divisorSum
 	end
 
 	if !$sums[divisorSum]
-		$sums[divisorSum] = (getProperDivisors divisorSum).inject(:+)
+		$sums[divisorSum] = divisorSum.properDivisors.inject(:+)
 	end
 
 	if $sums[divisorSum] === i

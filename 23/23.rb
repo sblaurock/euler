@@ -8,7 +8,7 @@ limit = 28123
 
 i = 12
 while i <= limit do
-	abundantNumbers.push(i) if (getProperDivisors i).inject(:+) > i
+	abundantNumbers.push(i) if i.properDivisors.inject(:+) > i
 
 	i += 1;
 end

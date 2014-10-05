@@ -37,8 +37,8 @@ while numerator <= limit
 end
 
 # Pre-calculate all divisors of 'numerator' and 'denominator'
-numeratorDivisors = getDivisors productNumerator
-denominatorDivisors = (getDivisors productDenominator).sort().reverse()
+numeratorDivisors = productNumerator.divisors
+denominatorDivisors = productDenominator.divisors.sort().reverse()
 
 # Locate the largest divisor 'numerator' and 'denominator' have in common to reduce fraction
 denominatorDivisors.each{|divisor|

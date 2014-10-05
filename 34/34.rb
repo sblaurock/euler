@@ -9,7 +9,7 @@ limit = 100000
 i = 10
 while i <= limit
 	# Add if sum of factorials of digits comprising number equal number itself
-	sum += i if i === i.to_s.split('').map{ |n| getFactorial n.to_i }.inject(:+)
+	sum += i if i === i.to_s.split('').map{ |n| n.to_i.factorial }.inject(:+)
 	i += 1
 end
 

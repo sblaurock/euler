@@ -9,7 +9,7 @@ primes = []
 i = 3
 limit = Math.sqrt(number).floor
 while i <= limit do
-	primes.push(i) unless !isPrime? i
+	primes.push(i) unless !i.prime?
 	i += 2
 end
 
